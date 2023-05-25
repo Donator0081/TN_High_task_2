@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/high-task-2/tasks")
+@RequestMapping("/api/v1/tasks")
 public class HighTask2RestController {
 
     @GetMapping("{id}")
