@@ -1,5 +1,6 @@
 package com.example.tn_high_task_2.controllers;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -21,6 +22,7 @@ class HighTask2RestControllerTest {
     private MockMvc mvc;
 
     @Test
+    @DisplayName("Testing get mapping for one task")
     void getTask() throws Exception {
         mvc.perform(get(URL_FOR_ONE_TASK))
                 .andExpect(status().isOk())
@@ -29,6 +31,7 @@ class HighTask2RestControllerTest {
     }
 
     @Test
+    @DisplayName("Testing get mapping for all task")
     void getTasks() throws Exception {
         mvc.perform(get(URL_FOR_ALL_TASKS))
                 .andExpect(status().isOk())
@@ -37,6 +40,7 @@ class HighTask2RestControllerTest {
     }
 
     @Test
+    @DisplayName("Testing post mapping for task")
     void createTask() throws Exception {
         mvc.perform(post(URL_FOR_ALL_TASKS))
                 .andExpect(status().isOk())
@@ -45,6 +49,7 @@ class HighTask2RestControllerTest {
     }
 
     @Test
+    @DisplayName("Testing put mapping for one task")
     void updateTask() throws Exception {
         mvc.perform(put(URL_FOR_ONE_TASK))
                 .andExpect(status().isOk())
@@ -53,6 +58,7 @@ class HighTask2RestControllerTest {
     }
 
     @Test
+    @DisplayName("Testing delete mapping for one task")
     void deleteTask() throws Exception {
         mvc.perform(delete(URL_FOR_ONE_TASK))
                 .andExpect(status().isOk())
