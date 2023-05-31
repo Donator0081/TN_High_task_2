@@ -18,6 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class HighTask2RestControllerTest {
 
     public static final String URL_FOR_ONE_TASK = "http://localhost:8080/api/v1/tasks/1";
+
     public static final String URL_FOR_ALL_TASKS = "http://localhost:8080/api/v1/tasks";
 
     @Autowired
